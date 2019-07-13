@@ -22,10 +22,8 @@ class Treez{
 		void deleteNode(struct student **, int);
         void deleteNode(struct student *, int);
 		void deleteAll(struct student *);
-		/*void display();
-		bool deleteAtBeg();
-		bool deleteAtEnd();
-		bool deleteAtPos(int );*/
+        int maxdepth(struct student *);
+		int size(struct student *);
 };
 
 #endif

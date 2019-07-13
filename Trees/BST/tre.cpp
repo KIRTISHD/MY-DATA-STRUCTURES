@@ -315,6 +315,8 @@ void Treez::deleteNode(struct student **root , int d)
 // done dana dan............
 }
 
+/*
+//Ha Nahi Chalat. Ha Dhavto
     void Treez::deleteNode(struct student *node, int d)
     {
         struct student* father = node;
@@ -382,18 +384,30 @@ void Treez::deleteNode(struct student **root , int d)
         //case 3: if node has 2 children
 
     }
-
-/*
-bool Treez::deleteAtEnd() {
-	
-}
-
-bool Treez::deleteAtBeg() {
-	
-}
-
-bool Treez::deleteAtPos(int pos) {
-	
-}
-
 */
+
+int Treez::maxdepth(struct student * node){
+    if (node == NULL)
+        return 0;
+    else {
+        int l = maxdepth(node->lchild);
+        int r = maxdepth(node->rchild);
+
+        if(l > r)
+            return l+1;
+        else 
+            return r+1;
+    }
+}
+
+int Treez::size(struct student * node){
+    if (node==NULL){
+        return 0;    
+    }
+    else{
+        int l = size(node->lchild);
+        int r = size(node->rchild);
+        int tsize = l+1+r;
+        return tsize;
+    }
+}

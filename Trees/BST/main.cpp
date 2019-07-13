@@ -18,6 +18,8 @@ int main(){
 		cout<<"4. Postorder"<<endl;
 		cout<<"5. Search item in tree"<<endl;
 		cout<<"6. Delete item in tree"<<endl;
+		cout<<"7. Max Depth of tree"<<endl;
+		cout<<"8. Size of tree"<<endl;
 		cout<<"9. DeleteTree"<<endl;
 		cout<<"10. Display"<<endl;
 		cin>>choice;
@@ -59,6 +61,14 @@ int main(){
                 //s1.deleteNode(root,no);
 				cout<<endl;
 				break;
+            case 7:
+                no = s1.maxdepth(root);
+                cout<<"Max Depth of tree is-"<<no<<endl;
+                break;
+            case 8:
+                no = s1.size(root);
+                cout<<"Size of tree is-"<<no<<endl;
+                break;
 			case 9:
 				s1.deleteAll(root);
 				cout<<endl;
